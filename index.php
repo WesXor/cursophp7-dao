@@ -46,12 +46,23 @@ require_once("config.php");
 // echo $aluno;
 
 
-// echo "<br><br><br>======================= Atualizando a senha de um usuario ==============================================<br><br>";
+// echo "<br><br><br>======================= Atualizando/alterar a senha de um usuario ==============================================<br><br>";
+
+// $usuario = new Usuario();
+// $usuario->loadById(10);
+// $usuario->update("Teacher", "235632");
+
+// echo $usuario;
+
+
+// echo "<br><br><br>======================= Atualizando/alterar a senha de um usuario ==============================================<br><br>";
 
 $usuario = new Usuario();
 $usuario->loadById(10);
-$usuario->update("Teacher", "235632");
+$usuario->delete();
 
 echo $usuario;
+
+
 
 ?>
