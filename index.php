@@ -2,21 +2,39 @@
 
 require_once("config.php");
 
-echo "<br>======= Select from Usuarios =======================================<br><br>";
+// echo "<br>======= Select from Usuarios =======================================<br><br>";
 
-$sql = new Sql();
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+// $sql = new Sql();
+// $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
-echo json_encode($usuarios);
+// echo json_encode($usuarios);
 
-echo "<br><br><br>========== Busca Usuario de id = 3  =====================================<br><br>";
+// echo "<br><br><br>========== Busca Usuario de id = 3  =====================================<br><br>";
 
-$root =  new Usuario();
+// $root =  new Usuario();
 
-$root->loadById(3);
+// $root->loadById(3);
 
-echo $root;
+// echo $root;
 
-echo "<br><br><br>======================================================================<br><br>";
+// echo "<br><br><br>=========================  Lista de Usuários  =============================================<br><br>";
+
+
+// $lista = Usuario::getList();
+
+// echo json_encode($lista);
+
+// echo "<br><br><br>=======================Busca  usuários pelo login ==============================================<br><br>";
+
+// $search = Usuario::search("Jo");
+// echo json_encode($search);
+
+
+// echo "<br><br><br>======================= Carrega Usuário utilizando o Login e a senha ==============================================<br><br>";
+
+$usuario = new Usuario();
+$usuario->login("jose", "1234a567890");
+
+echo $usuario;
 
 ?>
